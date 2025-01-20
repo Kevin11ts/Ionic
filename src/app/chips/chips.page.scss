@@ -1,0 +1,34 @@
+ion-chip {
+    --background: #f0f0f0;
+    --color: #333;
+    padding: 10px;
+  }
+  
+  ion-avatar img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .large-chip {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --height: 80px; /* Altura del chip */
+    font-size: 18px; /* Tamaño del texto */
+  }
+  
+  .large-chip ion-avatar {
+    width: 60px; /* Anchura del avatar */
+    height: 60px; /* Altura del avatar */
+  }
+  
+  .large-chip ion-avatar img {
+    border-radius: 50%; /* Asegura el avatar redondeado */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+  }
+  
+  .large-chip ion-label {
+    margin-left: 12px; /* Espacio entre el avatar y el texto */
+    font-weight: bold; /* Negrita opcional para el texto */
+  }
+  
+  

@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inicio"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Toolbars</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        Mi Toolbar
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="notifications"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title class="ion-text-center">
+        Mi Aplicación
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-segment value="home">
+      <ion-segment-button value="home">
+        <ion-label>Inicio</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="profile">
+        <ion-label>Perfil</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="settings">
+        <ion-label>Configuración</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+</ion-content>

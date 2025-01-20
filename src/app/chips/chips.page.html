@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chips</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [ngStyle]="{'--background': backgroundColor}">
+  <!-- Chips para cambiar el fondo -->
+  <ion-chip (click)="changeBackground('primary')" color="primary">
+    <ion-label>Azul</ion-label>
+  </ion-chip>
+  <ion-chip (click)="changeBackground('danger')" color="danger">
+    <ion-label>Rojo</ion-label>
+  </ion-chip>
+  <ion-chip (click)="changeBackground('success')" color="success">
+    <ion-label>Verde</ion-label>
+  </ion-chip>
+
+  <!-- Chip con avatar -->
+  <ion-list >
+    <ion-chip color="black" class="large-chip">
+      <ion-avatar>
+        <img [src]="profilePictureUrl" alt="Foto de perfil" />
+      </ion-avatar>
+      <ion-label>{{ userName }}</ion-label>
+    </ion-chip>
+  </ion-list>
+</ion-content>

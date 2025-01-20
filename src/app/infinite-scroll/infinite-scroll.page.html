@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>InfiniteScroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Perfiles</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <!-- Renderiza los perfiles -->
+      <ion-item *ngFor="let perfil of perfiles">
+        <ion-avatar slot="start">
+          <img [src]="perfil.imagen" alt="Avatar">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ perfil.nombre }}</h2>
+          <p>{{ perfil.descripcion }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  
+    <!-- Infinite Scroll -->
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="cargarMasPerfiles($event)">
+      <ion-infinite-scroll-content
+        loading-spinner="bubbles"
+        loading-text="Cargando más perfiles...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-content>
+  
+</ion-content>

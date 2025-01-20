@@ -1,0 +1,21 @@
+ion-img {
+    width: 100%;  /* Establece que la imagen ocupe todo el ancho */
+    max-width: 600px;  /* Limita el tamaño máximo en pantallas grandes */
+    height: auto;  /* Mantiene la proporción de la imagen */
+  
+    @media (max-width: 600px) {
+      max-width: 100%;  /* En pantallas pequeñas, la imagen ocupa todo el ancho */
+    }
+  }
+
+  video {
+    width: 100%;  /* El video ocupa todo el ancho disponible */
+    max-width: 100%;  /* Limita el tamaño máximo del video */
+    height: auto;  /* Mantiene la proporción del video */
+  
+    @media (max-width: 600px) {
+      max-width: 100%;  /* En pantallas pequeñas, el video ocupa todo el ancho */
+    }
+  }
+  
+  

@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Accordions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-content>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>Primera sección</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Contenido de la primera sección.
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="second">
+      <ion-item slot="header">
+        <ion-label>Segunda sección</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Contenido de la segunda sección.
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="primary">
+        <ion-label>Primera sección</ion-label>
+      </ion-item>
+      <div class="ion-padding" style="background-color: #e0f7fa;" slot="content">
+        Contenido con un fondo claro y personalizado.
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="second">
+      <ion-item slot="header" color="secondary">
+        <ion-label>Segunda sección</ion-label>
+      </ion-item>
+      <div class="ion-padding" style="background-color: #fce4ec;" slot="content">
+        Contenido con colores secundarios personalizados.
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group>
+    <!-- Primer acordeón -->
+    <ion-accordion value="inicio1">
+      <ion-item slot="header">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>Pérfil</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Se me rompió esta cosa xd
+      </div>
+    </ion-accordion>
+  
+    <!-- Segundo acordeón -->
+    <ion-accordion value="inicio2">
+      <ion-item slot="header">
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Contenido relacionado con la sección de inicio.
+      </div>
+    </ion-accordion>
+  
+    <!-- Tercer acordeón -->
+    <ion-accordion value="configuraciones">
+      <ion-item slot="header">
+        <ion-icon name="settings" slot="start"></ion-icon>
+        <ion-label>Configuraciones</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Ajustes y configuraciones disponibles aquí.
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  
+</ion-content>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Badges</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>Uno</ion-label>
+      <ion-badge color="primary">1</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dos</ion-label>
+      <ion-badge color="secondary">2</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tres</ion-label>
+      <ion-badge color="tertiary">3</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cuatro</ion-label>
+      <ion-badge color="success">4</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cinco</ion-label>
+      <ion-badge color="warning">5</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Seis </ion-label>
+      <ion-badge color="danger">6</ion-badge>
+    </ion-item>
+    <ion-button>
+      <ion-icon name="notifications"></ion-icon>
+      <ion-badge color="danger" slot="end">12</ion-badge>
+    </ion-button>    
+  </ion-list>
+  <ion-button>
+    <ion-icon name="cart"></ion-icon>
+    <ion-badge color="tertiary">8</ion-badge>
+  </ion-button>
+  <ion-button>
+    Messages
+    <ion-badge slot="end">5</ion-badge>
+  </ion-button>
+</ion-content>
