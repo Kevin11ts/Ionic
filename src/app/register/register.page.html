@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <!----> <form>
+    <ion-list>
+      <ion-item>
+        <ion-input
+          label="Nombre(s)"
+          labelPlacement="floating"
+          placeholder="Ingresa tu(s) nombre(s)"
+          [(ngModel)]="nombre"
+          name="nombre"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Apellidos"
+          labelPlacement="floating"
+          placeholder="Ingresa tus apellidos"
+          [(ngModel)]="apellidos"
+          name="apellidos"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Edad"
+          type="number"
+          labelPlacement="floating"
+          placeholder="Ingresa tu edad"
+          [(ngModel)]="edad"
+          name="edad">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Número telefónico"
+          type="tel"
+          labelPlacement="floating"
+          placeholder="Ingresa tu número telefónico"
+          [(ngModel)]="telefono"
+          name="telefono">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Correo"
+          type="email"
+          labelPlacement="floating"
+          placeholder="Ingresa tu correo"
+          [(ngModel)]="correo"
+          name="correo"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Contraseña"
+          type="password"
+          labelPlacement="floating"
+          [(ngModel)]="contrasenia"
+          name="contrasenia"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Confirme su contraseña"
+          type="password"
+          labelPlacement="floating"
+          [(ngModel)]="confirmarContrasenia"
+          name="confirmarContrasenia"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="ion-margin-top">
+        <ion-button type="submit" expand="block" color="primary" (click)="registrarse()">Registrarse</ion-button>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
