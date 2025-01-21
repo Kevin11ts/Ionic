@@ -1,4 +1,6 @@
+import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -17,12 +19,25 @@ export class RegisterPage implements OnInit {
   edad: string = ''
   ;
 
+  //Todas las dependencias se ingresan dentro de los () del constructor
   constructor(
     private toastController: ToastController,
     private navController: NavController,
   ) {}
 
   ngOnInit() {}
+
+  register(form: NgForm){
+  //console.log('form ', form);
+
+  /* console.log(form.value);
+   console.log(form.valid); //Valida que el usuario haya llenado todos los campos(required)
+   console.log(form.invalid);
+   */
+   if(form.valid) {
+    this.navController.navigateBack('/login');
+   }
+  }
 
   async presentToast(message: string) {
     const toast = await this.toastController.create({
