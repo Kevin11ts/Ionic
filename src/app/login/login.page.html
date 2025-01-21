@@ -4,40 +4,44 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+    <ion-list lines="full">
+      <!-- Campo de correo -->
+      <ion-item>
+        <ion-input
+          name="email"
+          label="Correo"
+          type="email"
+          labelPlacement="floating"
+          [(ngModel)]="email"
+          placeholder="Ingrese su correo"
+          required>
+        </ion-input>
+      </ion-item>
 
-  <ion-list lines="full">
-    <ion-item>
-      <ion-input  [(ngModel)]="email"
-        label="Correo" 
-        type="email" 
-        labelPlacement="floating" 
-        placeholder="Ingrese su correo" 
-        required>
-      </ion-input>
-    </ion-item>
+      <!-- Campo de contraseña -->
+      <ion-item>
+        <ion-input
+          name="password"
+          label="Contraseña"
+          type="password"
+          labelPlacement="floating"
+          [(ngModel)]="password"
+          placeholder="Ingrese su contraseña"
+          required>
+        </ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-input [(ngModel)]="password"
-        label="Contraseña" 
-        type="password" 
-        labelPlacement="floating" 
-        placeholder="Ingrese su contraseña" 
-        required>
-      </ion-input>
-    </ion-item>
+      <!-- Botón de inicio de sesión -->
+      <ion-button type="submit" expand="block" color="primary" [disabled]="loginForm.invalid">
+        Iniciar sesión
+      </ion-button>
 
-    <ion-item lines="none" class="ion-margin-top">
-      <ion-button expand="block" color="primary" (click)="login()">Iniciar sesión</ion-button>
-    </ion-item>
-
-    <ion-text>
-      <p>¿No tienes cuenta? <a routerLink="/register"> Regístrate</a></p>
-    </ion-text>
-  </ion-list>
+      <!-- Enlace a registro -->
+      <ion-text>
+        <p>¿No tienes cuenta? <a routerLink="/register">Regístrate</a></p>
+      </ion-text>
+    </ion-list>
+  </form>
 </ion-content>

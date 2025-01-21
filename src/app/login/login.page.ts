@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -8,37 +9,36 @@ import { NavController, ToastController } from '@ionic/angular';
   standalone: false,
 })
 export class LoginPage implements OnInit {
-
   email: string = '';
-  password : string = '';
+  password: string = '';
 
   constructor(
     private navController: NavController,
     private toastController: ToastController
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  login(){
-    if(this.email === 'kevinsandoval@gmail.com' && this.password === '12345') {
-      this.navController.navigateRoot('/inicio');
+  login(form: NgForm) {
+    if (form.valid) {
+      if (this.email.trim() === 'kevin' && this.password.trim() === '12345') {
+        this.navController.navigateRoot('/inicio');
+      } else {
+        this.presentToast('Las credenciales de acceso son incorrectas');
+      }
     } else {
-      this.presentToast();
+      this.presentToast('Por favor, completa todos los campos');
     }
   }
 
-  
-  
-    async presentToast() {
-      const toast = await this.toastController.create({
-        color: 'warning',
-        message: 'Las credenciales de acceso con incorrectas',
-        duration: 3000, //milisegundos
-        position: 'bottom',
-      });
-  
-      await toast.present();
-    }
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      color: 'warning',
+      message: message,
+      duration: 3000, // milisegundos
+      position: 'bottom',
+    });
 
+    await toast.present();
+  }
 }

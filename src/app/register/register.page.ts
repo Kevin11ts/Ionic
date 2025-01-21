@@ -28,12 +28,6 @@ export class RegisterPage implements OnInit {
   ngOnInit() {}
 
   register(form: NgForm){
-  //console.log('form ', form);
-
-  /* console.log(form.value);
-   console.log(form.valid); //Valida que el usuario haya llenado todos los campos(required)
-   console.log(form.invalid);
-   */
    if(form.valid) {
     this.navController.navigateBack('/login');
    }
